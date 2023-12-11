@@ -1,0 +1,231 @@
+html, body, * {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0;
+}
+
+body {
+    font-family: 'Comic Neue', cursive;
+}
+
+.container {
+    padding: 8px;
+}
+
+nav{
+    margin: 0px 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    width: 150px;
+    height: 48px;
+}
+
+#logo img{
+    width: 100%;
+    height: 100%;
+}
+
+#logo-mini {
+    width: 60px;
+    display: none;
+}
+
+#logo-mini img{
+    width: 100%;
+    height: 100%;
+}
+
+#fav {
+    margin: 0px auto 0px 10px;
+}
+
+.search {
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 4px;
+    margin-right: 16px;
+}
+
+.search input {
+    border: none;
+    font-size: 14px;
+    outline: none;
+    width: 180px;
+}
+
+/* main */
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #d9d9d9;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    box-shadow: 1px 3px 7px;
+    margin: 16px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+}
+
+.card .name {
+    position: absolute;
+    top: 80%;
+    background-color: white;
+    font-weight: bold;
+    padding: 4px;
+    max-width: 80%;
+}
+
+.card .blank-name {
+    width: 50%;
+    height: 26px;
+    position: absolute;
+    top: 80%;
+    background-color: white;
+}
+
+.card .fa-heart {
+    color: red;
+    position: absolute;
+    top: 78%;
+    right: 2%;
+    font-size: 23px;
+    background: white;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.card .gray-heart {
+    color: gray;
+}
+
+.about {
+    display: flex;
+    padding: 8px;
+    margin: auto;
+    width: 95%;
+}
+
+#thumbnail {
+    width: 300px;
+}
+
+#description {
+    padding: 8px;
+    font-size: 24px;
+    color: #5c5c5c;
+}
+
+#name{
+    margin: 8px;
+}
+
+#comics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.comic {
+    display: flex;
+    padding: 8px;
+    width: 46%;
+    border: 2px solid;
+    margin: 8px;
+}
+
+.comic-img {
+    width: 200px;
+    height: fit-content;
+}
+
+.comic-text {
+    padding: 0px 8px;
+    line-height: 1.1;
+}
+
+.comic-title{
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+/* large size screen styles */
+@media screen and (max-width: 992px) {
+    .comic {
+        width: 90%;
+    }
+
+    .comic:nth-child(2n) {
+        flex-direction: row-reverse;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .comic {
+        width: 100%;
+    }
+
+    #thumbnail {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    #logo-mini {
+        display: block;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    .search input {
+        width: 125px;
+    }
+
+    .card {
+        width: 165px;
+        height: 165px;
+        margin: 8px;    
+    }
+
+    .card img {
+        width: 165px;
+        height: 165px;
+    }
+
+    .card .name{
+        font-size: 12px;
+    }
+
+    #thumbnail {
+        width: 100px;
+    }
+
+    #description {
+        font-size: 16px;
+    }
+
+    .comic-img {
+        width: 120px;
+    }
+
+    
+}
